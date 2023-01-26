@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace HapChats.Infractucture.DbContexts;
 
@@ -30,6 +31,8 @@ public class ChatDbContext : IdentityDbContext<NewIdentityUser>
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
         base.OnModelCreating(builder);
 
         builder.Entity<NewIdentityUser>().ToTable("Users");
