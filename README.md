@@ -1,13 +1,33 @@
-# Hapchats
-Realtime chat application. Like messenger or discord
+HapChats – Happy Chats
 
 
-The application is created mainly in WPF that is using Web Api to manage data
+Realtime chat application. Like messenger or discord.
 
-App has functionality like messenger.
-User can create a new account, delete
-Add new friends, open chat boxes with them
-Change name of chat
-Change own usernames, manage profile
-In app there is the public chat also where everyone has access
-// Probably group chats will be added too.
+The application is created mainly in .Net MVC Core that is using Web Api to manage data in database.
+
+App functionalities:
+
+- User Management:
+	- Create new account
+	- Delete acount
+	- Modify Account
+	- Manage own profile
+
+- Profile Management”
+	- Set an profile image
+	- Change data like first name, last name, age
+
+- Friends Management:
+	- Send friend request
+	- Accept/Deny request
+	- Delete friend from friend list
+
+- Chats:
+	- Open new chat with friends
+	- Open new group chat with multiple users
+	- Delete or modify chat properties like name of chat
+	- Send messages on Public chat
+
+App is actually gonna work on postgresql database with own user credentials management.
+
+Api uses Token validation for allowing users to do anything.
