@@ -31,3 +31,37 @@ App functionalities:
 App is actually gonna work on postgresql database with own user credentials management.
 
 Api uses Token validation for allowing users to do anything.
+
+
+Application is on default using postgresql, you can run containers using docker-compose
+attatch to project or copy code below:
+
+```Dockerfile
+version: "3.9"
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: toor
+      POSTGRES_DB: chat
+    ports:
+      - "5432:5432/tcp"
+    networks:
+      - demo-net
+    deploy:
+      restart_policy:
+        condition: on-failure
+  adminer:
+    image: adminer:latest
+    ports:
+      - "8180:8080/tcp"
+    networks:
+      - demo-net
+    deploy:
+      restart_policy:
+        condition: on-failure
+
+networks:
+  demo-net:
+```
