@@ -6,5 +6,5 @@ namespace HapChats.Domain.Persistence.Entities;
 public record GroupChatBox : Auditable
 {
     [Required]
-    public ICollection<Guid> UsersInChatIds { get; set; }
+    public List<Guid> UsersInChatIds { get; set; }
 }

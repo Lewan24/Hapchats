@@ -1,16 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 
 namespace HapChats.Infractucture.DbContexts;
 
 public class ChatDbContextInitializer
 {
     private readonly ChatDbContext _context;
-    private readonly ILogger _logger;
-    public ChatDbContextInitializer(ChatDbContext context, ILogger logger)
+    public ChatDbContextInitializer(ChatDbContext context)
     {
         _context = context;
-        _logger = logger;
     }
 
     public async Task InitialiseAsync()
@@ -24,7 +21,6 @@ public class ChatDbContextInitializer
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "An error occurred while initialising the database.");
             throw;
         }
     }

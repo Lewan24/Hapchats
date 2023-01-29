@@ -35,9 +35,10 @@ public class ChatDbContext : IdentityDbContext<NewIdentityUser>
 
         base.OnModelCreating(builder);
 
-        builder.Entity<NewIdentityUser>().ToTable("Users");
+        builder.Entity<NewIdentityUser>().ToTable("Users")
+            .HasKey(i => i.Id);
         builder.Entity<IdentityRole>().ToTable("Roles");
-        builder.Entity<IdentityUserRole<Guid>>().ToTable("UsersRoles");
+        builder.Entity<IdentityUserRole<Guid>>().ToTable("UsersRoles").HasNoKey();
 
         builder.Entity<IdentityRole>().HasData(new IdentityRole()
         {
