@@ -30,4 +30,8 @@
     <ProjectReference Include="..\Infractucture\HapChats.Infractucture.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Functions\Account\Queries\" />
+  </ItemGroup>
+
 </Project>
