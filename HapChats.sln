@@ -5,11 +5,13 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{2EBFBBF8-7D3D-4B91-BC6C-F076CDA31C7E}"
 EndProject
+
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HapChats.Infractucture", "Infractucture\HapChats.Infractucture.csproj", "{1E630D79-3DBB-474D-A59A-AC63DEB88466}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HapChats.Domain", "HapChats.Domain\HapChats.Domain.csproj", "{E003AE6F-43BE-44F9-9F84-77846E964349}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Tests", "Api.Tests\Api.Tests.csproj", "{54A332A6-A0E1-4F34-B2CF-D94504BCC417}"
+
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

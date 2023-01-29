@@ -21,6 +21,12 @@ public class ChatDbContext : IdentityDbContext<NewIdentityUser>
     public DbSet<IdentityRole> Roles { get; set; }
     public DbSet<IdentityUserRole<Guid>> UsersRoles { get; set; }
 
+        var conn = _config.GetConnectionString("DefaultConnection");
+
+        optionsBuilder.UseNpgsql(conn);
+    }
+
+    public DbSet<User> Users { get; set; }
     public DbSet<UserProfile> UsersProfiles { get; set; }
     public DbSet<UserFriend> UserFriends { get; set; }
     public DbSet<FriendRequest> FriendsRequests { get; set; }
@@ -63,5 +69,4 @@ public class ChatDbContext : IdentityDbContext<NewIdentityUser>
             Name = "Moderator",
             NormalizedName = "MODERATOR"
         });
-    }
 }
