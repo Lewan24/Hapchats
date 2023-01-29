@@ -20,6 +20,6 @@ public class AccountController : ControllerBase
     {
         var result = await _mediator.Send(new DeleteAccountQuery());
 
-        return result is true ? Ok("Successfully deleted account,") : Ok("Unfortunately cant delete account. Try again later.");
+        return result is true ? Ok("Successfully deleted account,") : BadRequest("Unfortunately cant delete account. Try again later.");
     }
 }

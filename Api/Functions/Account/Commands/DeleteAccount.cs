@@ -10,6 +10,7 @@ public class DeleteAccountHandler : IRequestHandler<DeleteAccountQuery, bool>
 {
     Task<bool> IRequestHandler<DeleteAccountQuery, bool>.Handle(DeleteAccountQuery request, CancellationToken cancellationToken)
     {
+        // TODO: Implement delete function
         return Task.FromResult(false);
     }
 }
