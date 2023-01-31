@@ -1,3 +1,5 @@
+using Api.Controllers;
+using MediatR;
 using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
 using Newtonsoft.Json;
 using System.Net;
@@ -5,7 +7,7 @@ using System.Text;
 
 namespace Api.Tests;
 
-public class UnitTest
+public class AccountControllerTest
 {
     [Fact]
     public async Task DeleteAccount_ShouldReturnBadRequest()

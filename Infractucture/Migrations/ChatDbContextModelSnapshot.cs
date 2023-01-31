@@ -323,27 +323,27 @@ namespace HapChats.Infractucture.Migrations
                         .IsUnique()
                         .HasDatabaseName("RoleNameIndex");
 
-                    b.ToTable("Roles", (string)null);
+                    b.ToTable("AspNetRoles", (string)null);
 
                     b.HasData(
                         new
                         {
-                            Id = "fe766e78-6e46-4f61-831a-09db06340812",
-                            ConcurrencyStamp = "02c05184-6601-4ef1-8e80-e04b7f5182c7",
+                            Id = "017a8bb3-9c5f-431b-85a1-55bb02f63b4f",
+                            ConcurrencyStamp = "339f1d44-c1bb-4b4b-b1b6-21f64dc03a81",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "2d68c53d-5ba0-4a80-b744-a9c632410fc7",
-                            ConcurrencyStamp = "d14f6d8e-2f96-4099-9dcb-aaaedf4479de",
+                            Id = "e1e0c99b-e174-4686-b1fe-82d6f9e3543d",
+                            ConcurrencyStamp = "8dea47f2-dcd9-4690-9f6f-f6aecb1c5e68",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "b8164959-00ec-4a5e-88a5-c5e6b8fc4e62",
-                            ConcurrencyStamp = "ca21cce9-515f-4f26-8c8e-797093ea7b66",
+                            Id = "5f5ca0e4-45a9-4a06-9803-c40d9d5ce682",
+                            ConcurrencyStamp = "2c29e6d1-0d70-4375-bbcf-d598aec556a4",
                             Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         });
